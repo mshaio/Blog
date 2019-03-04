@@ -7,6 +7,8 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^articles/',include('articles.urls')),
     url(r'^ML/$',views.ML),
+    url(r'^cybersecurity/$',views.cyber_security),
+    url(r'^robotics/$',views.robotics),
     url(r'^$',views.homepage),
 ]
 

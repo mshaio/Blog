@@ -5,6 +5,8 @@ from django.db import models
 
 # Create your models here.
 class Article(models.Model):
+    """Creates an article model"""
+    category = models.CharField(max_length=100)
     title = models.CharField(max_length=100)
     slug = models.SlugField()
     body = models.TextField()
@@ -12,12 +14,16 @@ class Article(models.Model):
     #add in thumbnail
 
     def __str__(self):
+        """Retrieves blog title"""
         return self.title
 
     def snippet(self):
+        """Retrieves blog content"""
         return self.body[:500] + "..."
 
+    def retrieve_category(self):
+        """Retrieves blog category"""
+        return self.category
 
-
-#python manage.py makemigration (For creating a new db eg, a new class)
+#python manage.py makemigrations (For creating a new db eg, a new class)
 #python manage.py migrate
