@@ -18,8 +18,15 @@ class Article(models.Model):
         return self.title
 
     def snippet(self):
-        """Retrieves blog content"""
+        """Retrieves first 500 characters of the blog content"""
         return self.body[:500] + "..."
+
+    def content(self):
+        """Retrieves blog content"""
+        return self.body
+
+    def slugs(self):
+        return self.slug
 
     def retrieve_category(self):
         """Retrieves blog category"""

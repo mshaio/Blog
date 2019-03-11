@@ -26,6 +26,15 @@ def robotics(request):
     #return HttpResponse("ML")
     #return render(request,'ML.html')
 
+def django_article(request):
+    """Retrieves Django Blog
+    also retrieving the most recent 3 articles in the database
+    """
+    articles = Article.objects.all()
+    article = articles.get(title="Learning Django")
+    recent_articles = Article.objects.all().order_by("date")[:3]
+    return render(request,'DjangoArticle.html',{'article':article, 'recent_articles':recent_articles})
+
 def filter(blog_category):
     """Filters the articles by date and by blog category"""
     articles = Article.objects.all().order_by("date") #retrieves article from db by date
