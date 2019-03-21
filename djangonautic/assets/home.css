@@ -21,6 +21,7 @@
 
 .h1 {
   margin-left: 50px;
+  font-family: 'Sofia';font-size: 22px;
 }
 
 .center {
@@ -38,4 +39,27 @@
     top: 0;
     left: 0;
     min-height: 400px;
+}
+
+.box:hover {
+  border: 2px solid blue;
+
+}
+
+.box{
+  font-size: 17px;
+}
+
+.box p {
+  font-family: "Times New Roman", Times, serif;
+}
+
+nav a{
+    color: white;
+    font-size: 1.3em;
+}
+
+.article p{
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
 }

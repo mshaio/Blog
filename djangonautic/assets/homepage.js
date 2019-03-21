@@ -15,3 +15,7 @@ toastr.options = {
   "showMethod": "fadeIn",
   "hideMethod": "fadeOut"
 }
+
+$('#cyber').hover(function(){
+$(this).css("background", "blue");
+});

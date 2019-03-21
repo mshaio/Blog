@@ -2,6 +2,9 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from ckeditor.fields import RichTextField
+from tinymce.models import HTMLField
+#from inline_media.fields import TextFieldWithInlines
 
 # Create your models here.
 class Article(models.Model):
@@ -10,6 +13,9 @@ class Article(models.Model):
     title = models.CharField(max_length=100)
     slug = models.SlugField()
     body = models.TextField()
+    #body = HTMLField()
+    #body = RichTextField()
+    #body = models.TextFieldWithInlines() Does not work
     date = models.DateTimeField(auto_now_add=True)
     #add in thumbnail
 

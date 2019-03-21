@@ -37,8 +37,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'articles'
+    'articles',
+    'ckeditor',
+    'tinymce'
+    #'sorl.thumbnail',
+    #'tagging',
+    #'inline_media',
 ]
+
+THUMBNAIL_BACKEND = "inline_media.sorl_backends.AutoFormatBackend"
+THUMBNAIL_FORMAT = "JPEG"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

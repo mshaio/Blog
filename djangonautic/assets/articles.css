@@ -1,0 +1,30 @@
+nav a{
+    color: white;
+    font-size: 1.3em;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.carousel .item {
+  height: 400px;
+  width:auto;
+}
+
+.item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 400px;
+}
+
+.article h1{
+  font-family: 'Playfair Display', serif;
+}
+
+.article p{
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+}

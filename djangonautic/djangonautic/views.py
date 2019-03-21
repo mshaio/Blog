@@ -11,7 +11,7 @@ def homepage(request):
 
 def ML(request):
     """Retrieves blogs based on the web category (will need to change this to the ML categories)"""
-    articles = filter("WebDev")
+    articles = filter("ML")
     return render(request,'ML.html',{'articles':articles})
 
 def cyber_security(request):
@@ -32,8 +32,9 @@ def django_article(request):
     """
     articles = Article.objects.all()
     article = articles.get(title="Learning Django")
-    recent_articles = Article.objects.all().order_by("date")[:3]
-    return render(request,'DjangoArticle.html',{'article':article, 'recent_articles':recent_articles})
+    recent_articles = Article.objects.all().order_by("-date")[:3]
+    oldest_articles = Article.objects.all().order_by("date")[:3]
+    return render(request,'DjangoArticle.html',{'article':article, 'recent_articles':recent_articles, 'oldest_articles':oldest_articles})
 
 def filter(blog_category):
     """Filters the articles by date and by blog category"""
